@@ -1,3 +1,13 @@
+"""
+Game.py is responsible for setting up the chessboard, placing the pieces, 
+implementing the score system, and defining the rules of the game.
+
+Note 1: It does not control individual pieces directly; their behavior is 
+defined in separate scripts located in the Chess_pieces folder.
+
+Note 2: To customize the appearance of the pieces, edit the "pieces.json" 
+file where their attributes are defined.
+"""
 from Chess_pieces.Common import Common
 
 

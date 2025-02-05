@@ -1,3 +1,10 @@
+"""
+Defines the base configuration for all chess pieces as a parent class,
+including display attributes for each piece.
+
+Note: The child classes inheriting from this class implement 
+the specific movement logic for each piece.
+"""
 import json
 
 
