@@ -12,7 +12,11 @@ from Chess_pieces.Common import Common
 
 
 class Game:
-    blocks = {"white": "O", "black": "#"}  # The symbol that represent the chess' blocks.
+    blocks = {
+        "white": "O",
+        "black": "#"
+    }  # Symbols used to visually represent the chessboard's alternating white and black squares.
+    turn = {"number": 1, "color": "white"}  # Tracks the current turn number and the color of the player who has to move
 
     def __init__(self, player1="Player 1", player2="Player 2"):
         self.board = [
@@ -26,13 +30,15 @@ class Game:
             [0, 0, 0, 0, 0, 0, 0, Common("Pawn", "White")]
 
         ]
-        self.player1 = player1
-        self.player2 = player2
+        self.players = {"white": player1, "black": player2}
 
     def __repr__(self):
         cols = '  '.join([chr(i + 65) for i in range(len(self.board))])
+
         game_board = f"\t{cols}\n"  # Create the guide A-H columns coordinates.
-        for row_idx in range(len(self.board)):  # Generate all the Chess bord with its respective blocks and pieces.
+
+        for row_idx in range(
+                len(self.board)):  # Loop through each row to construct the chessboard representation, including pieces and squares.
             game_board += f"{8 - row_idx}\t"
             for col_idx in range(len(self.board[row_idx])):
                 if self.board[row_idx][col_idx]:
@@ -42,3 +48,7 @@ class Game:
             game_board += "\n"
 
         return game_board  # Return the chess board
+
+    def get_player_turn(self, message=""):
+        player_name = self.players[f"{self.turn['color']}"]  # Get the name of the player's turn
+        return f"Turn {self.turn['number']} - {player_name}{message}"

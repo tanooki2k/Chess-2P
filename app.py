@@ -14,13 +14,19 @@ with open(path) as file:
     script = json.load(file)[0]
 
 
-def start():
+def play():
     print(script["Welcoming"])
     player1 = ask_the_name(script["Player1"], "Player 1")
     player2 = ask_the_name(script["Player2"], "Player 2")
 
     chess = Game(player1, player2)
-    print(chess)
+    run = True
+    print()
+
+    while run:
+        print(chess.get_player_turn(script["Turn"]))
+        print(chess)
+        move = input(script["Move"])
 
 
 def ask_the_name(message, default=None):
@@ -31,4 +37,4 @@ def ask_the_name(message, default=None):
 
 
 if __name__ == "__main__":
-    start()
+    play()
