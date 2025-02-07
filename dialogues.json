@@ -4,8 +4,6 @@
     "Player1": "Please enter Player 1's name (press 'ENTER' to skip):",
     "Player2": "Please enter Player 2's name (press 'ENTER' to skip):",
     "Turn": "'s turn. Here are the current game settings:",
-    "Move": "Make your move in the format:\n\tQd1-d5\nSpecify the piece, its current position, and the destination using the '-' separator.",
-    "InvalidMove": "Invalid move: either the move is illegal, or you attempted to capture your own piece.",
-    "OutOfBounds": "Invalid move: the specified position is outside the board boundaries."
+    "Move": "Make your move in the format (or type 'resign' to give up):\nQd1-d5\nSpecify the piece, its current position, and the destination using the '-' separator."
   }
 ]

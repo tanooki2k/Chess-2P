@@ -11,15 +11,16 @@ import json
 class Common:
     alive = 0
 
-    def __init__(self, kind, team):
+    def __init__(self, kind=None, team=None):
         self.type = kind
         self.team = team
 
-        try:
-            self.display = pieces[f"{self.team}"][f"{self.type}"]
-        except KeyError:
-            raise KeyError(
-                f"Invalid piece configuration: Type '{self.type}' or Team '{self.team}' is not defined. Please check the pieces definition.")
+        if kind is not None:
+            try:
+                self.display = pieces[f"{self.team}"][f"{self.type}"]
+            except KeyError:
+                raise KeyError(
+                    f"Invalid piece configuration: Type '{self.type}' or Team '{self.team}' is not defined. Please check the pieces definition.")
 
     def move(self):
         pass

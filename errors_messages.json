@@ -1,0 +1,10 @@
+[
+  {
+    "InvalidLengthMove": "Invalid move: The provided move '{move}' does not meet the required length.",
+    "InvalidFormatMove": "Invalid move: The provided move '{move}' does not include both the current position of the piece and its destination.",
+    "IllegalMove": "Invalid move: either the move is illegal, or you attempted to capture your own piece.",
+    "OutOfBounds": "Invalid move: the specified position is outside the board boundaries.",
+    "Help": "Do you need guidance on using algebraic notation to represent Chess pieces and their moves?",
+    "Confirmation": "Press 'Enter' to continue."
+  }
+]

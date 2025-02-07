@@ -23,10 +23,11 @@ def play():
     run = True
     print()
 
-    while run:
-        print(chess.get_player_turn(script["Turn"]))
-        print(chess)
-        move = input(script["Move"])
+    # while run:
+    print(chess.get_player_turn(script["Turn"]))
+    print(chess)
+    move = input(script["Move"] + "\n")
+    print(chess.move_decipher(move))
 
 
 def ask_the_name(message, default=None):
