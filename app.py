@@ -8,8 +8,9 @@ the "dialogues.json" file.
 
 from game import Game
 import json
+import os
 
-path = "/home/javier/PycharmProjects/Chess2P/dialogues.json"
+path = r"C:\Users\Student 01\Downloads\Chess-2P\dialogues.json"
 with open(path) as file:
     script = json.load(file)[0]
 
@@ -23,11 +24,14 @@ def play():
     run = True
     print()
 
-    # while run:
-    print(chess.get_player_turn(script["Turn"]))
-    print(chess)
-    move = input(script["Move"] + "\n")
-    print(chess.move_decipher(move))
+    while run:
+        os.system("cls")
+        print(chess.get_player_turn(script["Turn"]))
+        print(chess)
+        move = input(script["Move"] + "\n")
+        print(chess.move_decipher(move))
+        input()
+        
 
 
 def ask_the_name(message, default=None):

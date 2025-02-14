@@ -26,9 +26,29 @@ class Common:
         pass
 
 
-path = '/home/javier/PycharmProjects/Chess2P/pieces.json'
+
+pieces={
+"White": {
+      "Pawn": "♟",  "Rook": "♜",
+      "Knight": "♞", "Bishop": "♝",
+      "Queen": "♛","King": "♚"
+    },
+
+"Black": {
+      "Pawn": "♙", "Rook": "♖",
+      "Knight": "♘", "Bishop": "♗",
+      "Queen": "♕", "King": "♔"
+    }
+}
+
+
+
+r"""
+path = r'C:\Users\Student 01\Downloads\\Chess-2P\pieces.json'
 with open(path) as file:
     pieces = json.load(file)[0]
+    
+"""
 
 if __name__ == "__main__":
     print(pieces)

@@ -4,6 +4,8 @@
     "Player1": "Please enter Player 1's name (press 'ENTER' to skip):",
     "Player2": "Please enter Player 2's name (press 'ENTER' to skip):",
     "Turn": "'s turn. Here are the current game settings:",
-    "Move": "Make your move in the format (or type 'resign' to give up):\nQd1-d5\nSpecify the piece, its current position, and the destination using the '-' separator."
+    "Move": "Make your move in the format (or type 'resign' to give up):\nQd1-d5\nSpecify the piece, its current position, and the destination using the '-' separator.",
+    "Resign": "has resigned.",
+    "Winner": "has won the game by"
   }
 ]

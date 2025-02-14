@@ -19,6 +19,7 @@ class Game:
     }
     turn = {"number": 1,
             "color": "white"}  # Stores the current turn number and specifies whether it's White or Black's turn.
+    victory_by = None
 
     def __init__(self, player1="Player 1", player2="Player 2"):
         self.board = [
@@ -94,6 +95,6 @@ class Game:
         return piece, current_position, destination
 
 
-path = "/home/javier/PycharmProjects/Chess2P/errors_messages.json"
+path = r"C:\Users\Student 01\Downloads\Chess-2P\errors_messages.json"
 with open(path) as file:
     errors = json.load(file)[0]
